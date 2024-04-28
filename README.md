@@ -22,8 +22,21 @@ This application, built with the PyNest framework, provides a robust suite of se
 ### Clone the Repository
 
 ```bash
-git clone [repository-url]
-cd [repository-folder]
+git clone https://github.com/ItayTheDar/Stockify.git
+cd Stockify
+```
+
+## Local Deployment
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Application
+
+```base
+uvicorn src.app_module:http_server --host "0.0.0.0" --port 8000
 ```
 
 ## Docker Deployment
@@ -36,8 +49,11 @@ Access the API at http://localhost:8000 upon deployment. Explore API endpoints t
 
 ## API Endpoints
 GET `/stocks`: Fetch a list of stocks.
+
 POST `/stocks`: Register a new stock.
+
 PUT `/stocks/:{id}`: Modify details of an existing stock.
+
 DELETE `/stocks/:{id}`: Erase a stock record.
 
 Endpoints also include functions for managing company officers and detailed stock price data.
